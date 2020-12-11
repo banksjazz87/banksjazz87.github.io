@@ -1,13 +1,158 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(to bottom right, rgb(83, 80, 80), rgb(124, 119, 119), rgb(83, 80, 80), rgb(124, 119, 119));
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 1.75em;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+#display {
+    grid-area: display;
+    text-align: right;
+    background-color: white;
+    font-size: .7em;
+    line-height: .7em;
+    font-size: .75em;
+    height: 3em;
+    border: solid;
+    border-width: .05em;
+    border-color: rgb(31, 30, 30);
+}
+
+.number {
+    background-color: rgb(119, 124, 202);
+    border-color: black;
+    border-style: solid;
+    border-width: .05em;
+    border-radius: 10%;
+}
+
+.number:hover {
+    background-color: rgb(175, 169, 233);
+}
+
+.operator {
+    background-color: rgb(243, 176, 99);
+    border-color: black;
+    border-style: solid;
+    border-width: .05em;
+    border-radius: 10%;
+}
+
+.operator:hover {
+    background-color: rgb(247, 201, 149);
+}
+
+.all-clear {
+    background-color: rgb(243, 99, 99);
+    border-color: black;
+    border-style: solid;
+    border-width: .05em;
+    border-radius: 10%;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#add {
+    grid-area: add;
+}
+
+#add:hover {
+    background-color: rgb(250, 192, 126);
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#clear:hover {
+    background-color: rgb(252, 130, 130);
+}
+
+#container {
+    display: inline-grid;
+    grid-template-columns: 3em 3em 3em 3em;
+    grid-template-rows: 3em 3em 3em 3em 3em 3em;
+    grid-template-areas: "display display display display" "clear clear divide multiply" "seven eight nine subtract" "four five six add" "one two three equals" "zero zero decimal equals";
+    grid-column-gap: .15em;
+    grid-row-gap: .15em;
+    background-color: rgb(138, 136, 136);
+    padding: 1.5em 1.5em 1.5em 1.5em;
+    margin-top: 15%;
+    text-align: center;
+    justify-content: center;
+    border: solid;
+    border-width: .25em;
+    border-color: black;
+    border-radius: 5%;
 }
